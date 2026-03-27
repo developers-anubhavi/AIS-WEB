@@ -1,0 +1,65 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== HEADER ===== */
+/*.asahi-header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 15px;*/ /* instead of margin */
+    /*box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.logo {
+    height: 65px;
+}*/
+
+/* ===== CARD STYLE ===== */
+.module-card {
+    height: 200px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    text-align: center;
+    padding: 30px 20px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    color: #fff;
+}
+
+    .module-card:hover {
+        transform: translateY(-12px) scale(1.03);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+/* ===== ICON ===== */
+.module-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #ffecd2, #fcb69f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.module-name {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+a.module-link {
+    text-decoration: none;
+}

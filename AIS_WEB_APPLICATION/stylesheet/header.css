@@ -1,0 +1,144 @@
+﻿/* =====================
+   GLOBAL RESET
+===================== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* =====================
+   FIXED HEADER
+===================== */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 28px;
+    font-weight: 700;
+    z-index: 1000;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+    .fixed-header .logo {
+        height: 55px;
+    }
+
+/* =====================
+   FIXED SIDE NAV
+===================== */
+.fixed-sidenav {
+    position: fixed;
+    top: 80px; /* below header */
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+    z-index: 999;
+}
+
+    /* Expand on hover */
+    .fixed-sidenav:hover {
+        width: 230px;
+    }
+
+    /* Menu items */
+    .fixed-sidenav a {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 20px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        white-space: nowrap;
+        border-left: 4px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+        .fixed-sidenav a span {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+    .fixed-sidenav:hover a span {
+        opacity: 1;
+    }
+
+    .fixed-sidenav a:hover {
+        background: rgba(255,255,255,0.15);
+        border-left: 4px solid #00c6ff;
+    }
+
+/* =====================
+   PAGE CONTENT OFFSET
+===================== */
+.page-content {
+    margin-left: 70px;
+    margin-top: 80px;
+    padding: 30px;
+    transition: margin-left 0.3s ease;
+}
+
+.fixed-sidenav:hover ~ .page-content {
+    margin-left: 230px;
+}
+
+
+.moduleiconside {
+    font-size: 29px!important;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #ffecd2, #fcb69f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.logout-btn {
+    color: #ff4d4d !important;
+    font-weight: 600;
+}
+
+.user-info {
+    position: absolute;
+    bottom: 15px;
+    left: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    /* USER ICON STYLE */
+    .user-info i {
+        border-top: 1px solid rgba(255,255,255,0.2);
+        padding-top: 10px;
+        font-size: 28px;
+        background: linear-gradient(45deg,#ffecd2,#fcb69f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+/* USER NAME STYLE */
+.lbluser {
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* SHOW NAME WHEN SIDEBAR EXPANDS */
+.fixed-sidenav:hover .lbluser {
+    opacity: 1;
+}
+.lbluser{
+    color:white!important
+}
